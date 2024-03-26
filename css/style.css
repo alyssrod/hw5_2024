@@ -11,35 +11,33 @@ body {
 }
 
 /* The header is styled to center its contents, with a white background and a teal bottom border for visual separation from the body content. */
-body > header{
+
+header {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background: #fff;
-    border-bottom: 3px solid #50C7C7;
-    margin-bottom:20px
-  }
 
 /* Defines the animation for the logo, which grows in size and fades in from transparent to opaque over 5 seconds. */
-@keyframes logo-movement {
-    from { 
+@keyframes logochange{
+    0% { 
       width: 25px;
       opacity: 0;
     }
-    to {
+    100% {
       width: 475px;
       opacity: 1;
     }
 }
 
 #logo {
-    width: 475px;
+    animation: logochange 5s linear 0s 1;
 }
 
 /* The navigation links are laid out horizontally, spaced evenly. Link colors are standardized to ensure consistency, with underline styles for hover and focus states for accessibility. */
 .nav_links {
     display: flex;
+    flex-wrap: nowrap; 
     flex-direction: column;
 }
 .nav_item a:link, .nav_item a:visited, .nav_item a:focus, .nav_item a:hover {
@@ -66,7 +64,7 @@ body > header{
     justify-content: center;
 }
 .card {
-    flex: 0 0 450px; 
+    flex-basis: 450px; 
     border-radius: 50px 50px 0 0;
 }
 
@@ -78,7 +76,7 @@ body > header{
     align-content: center;
     justify-content: center;
 }
-.gallery > img {
+.gallery img {
     width: 300px;
     margin: 10px;
     border: solid 10px #50C7C7;
@@ -91,23 +89,22 @@ body > header{
         justify-content: space-between;
     }
     .pricing {
-        flex-direction: row;
-        justify-content: center;
+        flex-wrap: nowap; 
     }
     .card {
-        flex-basis: 0 0 275px;
+        flex-basis: 275px;
     }
     body > header {
-        position: fixed;
+        position: sticky;
         width: 100%;
     }
 }
 
 /* For users who prefer reduced motion, the logo's animation is disabled to avoid unnecessary motion. */
-@media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: reduce) {
     #logo {
-        animation-name: logo-movement;
-        animation-duration: 5s;
+        width: 475px; 
+        animation: none; 
     }
 }
 
@@ -117,14 +114,18 @@ body > header{
         font-family: Arial, Helvetica;
         background-image: none;
     }
-    .nav_links, nav {
-        flex-direction: row;
+    header { 
+        flex-direction: column; 
+    } 
+    nav {
         width: 100%;
-        align-items: center;
+    }
+    .nav_links {
+        display: flex; 
+        flex-direction: row;
         justify-content: space-around;
     }
     .pricing {
-        flex-direction: row;
         flex-wrap: nowrap;
         align-items: flex-end;
     }
@@ -134,15 +135,12 @@ body > header{
     }
 
     /* Hiding gallery images in print to focus on text-based content */
-    #gallery, .gallery {
+    .gallery, #gallery {
         display: none; /* Ensuring gallery section is not printed */
     }
 
     /* Adding a thumbs up emoji to specific list items in cards for a touch of flair */
-    .card :nth-of-type(2)::after {
+    .card li:nth-of-type(2)::after {
         content: "\1F44D"; /* thumbs up emoji */
-    }
-    footer {
-        page-break-before: always; 
     }
 }
