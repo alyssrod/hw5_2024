@@ -60,7 +60,7 @@ body > header{
 /* Pricing cards are laid out in a column for mobile views and switch to row layout for wider screens, with cards centered. The card headers have a specific background color and rounded corners. */
 .pricing {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap; 
     align-items: center;
     justify-content: center;
