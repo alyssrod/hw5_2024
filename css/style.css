@@ -1,79 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/* Imports the Poppins font family from Google Fonts, including all the available weights from 100 to 900. This allows the website to use various font weights for typography design. */
 
+/* Sets the Poppins font from Google Fonts as the default font for the body. The backup font is serif. The body also has a light gray background color and a background image for texture. */
 body {
-    margin: 0; /* Removes the default margin from the body element to ensure the layout stretches fully across the viewport. */
-    padding: 0; /* Removes the default padding from the body element for a full-width layout. */
-    font-family: 'Poppins', serif; /* Sets the default font to Poppins, with a generic serif font as a fallback. */
-    font-size: 1.3rem; /* Sets the default font size to 1.3rem, scaling the text size based on the user's browser settings for readability. */
-    background-color: #f1f1f1; /* Sets a light gray color as the background of the webpage for a subtle, neutral look. */
-    background-image: url('../images/concrete_seamless.png'); /* Adds a background texture to the webpage for visual depth. */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', serif;
+    font-size: 1.3rem;
+    background-color: #f1f1f1;
+    background-image: url('../images/concrete_seamless.png');
 }
 
+/* The header is styled to center its contents, with a white background and a teal bottom border for visual separation from the body content. */
 header {
-    display: flex; /* Enables flexbox layout to easily center and organize header content. */
-    flex-wrap: nowrap; /* Ensures the header content doesn't wrap and stays in a single row. */
-    flex-direction: column; /* Aligns header content vertically for a structured look. */
-    align-items: center; /* Centers the header content horizontally within the header element. */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
 }
-
 @keyframes logochange {
     0% { 
-      width: 25px; /* Starts the animation with the logo width at 25px. */
-      opacity: 0; /* Starts the animation with the logo fully transparent. */
+      width: 25px;
+      opacity: 0;
     }
     100% {
-      width: 475px; /* Ends the animation with the logo width at 475px. */
-      opacity: 1; /* Ends the animation with the logo fully opaque. */
+      width: 475px;
+      opacity: 1;
     }
 }
 
 #logo {
-    animation: logochange 5s linear 0s 1; /* Applies the "logochange" animation over 5 seconds, once, without delay, and with a constant animation speed. */
+    animation: logochange 5s linear 0s 1;
 }
-
+/* The navigation links are laid out horizontally, spaced evenly. Link colors are standardized to ensure consistency, with underline styles for hover and focus states for accessibility. */
 .nav_links {
-    display: flex; /* Enables flexbox layout for navigation links, allowing responsive alignment and spacing. */
-    flex-wrap: nowrap; /* Prevents the navigation links from wrapping, keeping them in a single row or column. */
-    flex-direction: column; /* Aligns the navigation links vertically in a column. */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
 }
-
 .nav_item a:visited {
-    color: blue; /* Styles links that have been visited to appear blue, providing visual feedback to users. */
+    color: blue;
 }
 
 .card > header {
-    background:#288088; /* Sets a teal background color for the headers within cards. */
-    border:2px solid #45ADAD; /* Adds a solid border with a slightly different shade of teal for contrast. */
-    padding: 20px 0; /* Adds vertical padding to the card header for spacing. */
-    border-radius: 50px 50px 0 0; /* Rounds the top corners of the card header for a smooth, modern look. */
+    background:#288088;
+    border:2px solid #45ADAD;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
 }
 
+/* Pricing cards are laid out in a column for mobile views and switch to row layout for wider screens, with cards centered. The card headers have a specific background color and rounded corners. */
 .pricing {
-    display: flex; /* Enables flexbox layout for the pricing section, allowing responsive arrangement of pricing cards. */
-    flex-direction: row; /* Arranges pricing cards horizontally in a row. */
-    flex-wrap: wrap; /* Allows pricing cards to wrap onto multiple lines as needed for responsiveness. */
-    align-items: center; /* Vertically centers pricing cards within the pricing section. */
-    justify-content: center; /* Horizontally centers pricing cards within the pricing section. */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
 }
-
 .card {
-    flex-basis: 450px; /* Sets the default size of pricing cards to 450px before they start to wrap or stretch. */
-    border-radius: 50px 50px 0 0; /* Applies rounded corners to the top of pricing cards for a consistent, styled appearance. */
+    flex-basis: 450px; 
+    border-radius: 50px 50px 0 0;
 }
 
+/* The gallery is flexibly laid out to accommodate varying screen sizes, ensuring images are centered and wrap as needed. Each image has a thick, teal border for emphasis. */
 .gallery {
-    display: flex; /* Enables flexbox layout for the gallery section, allowing responsive and flexible arrangement of images. */
-    flex-direction: row; /* Arranges gallery images horizontally in a row. */
-    flex-wrap: wrap; /* Allows gallery images to wrap onto multiple lines as needed for responsiveness. */
-    justify-content: center; /* Horizontally centers gallery images within the gallery section. */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
 .gallery img {
-    width: 300px; /* Sets a fixed width for each gallery image for consistency. */
-    margin: 10px; /* Adds margin around each gallery image for spacing. */
-    border: solid 10px #50C7C7; /* Adds a thick, teal border to each gallery image for emphasis and
-
+    width: 300px;
+    margin: 10px;
+    border: solid 10px #50C7C7;
 }
 
 /* For screens wider than 900px, the header and navigation links are laid out in a row, ensuring the logo is on the left and navigation links on the right. The pricing section is adjusted to lay out cards in a row, and the first header is made sticky to remain visible on scroll. */
@@ -111,7 +109,10 @@ header {
     header {
         flex-direction: column;
     } 
-    .nav_links, nav {
+    nav {
+        width: 100%; 
+    }
+    .nav_links {
         flex-direction: row;
         width: 100%;
         align-items: center;
