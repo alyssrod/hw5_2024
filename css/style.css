@@ -92,7 +92,7 @@ header {
         flex-wrap: nowap; 
     }
     .card {
-        flex-basis: 0 0 275px;
+        flex-basis: 275px;
     }
     body > header {
         position: sticky;
@@ -114,10 +114,12 @@ header {
         font-family: Arial, Helvetica;
         background-image: none;
     }
+    header { 
+        flex-direction: column; 
+    } 
     nav {
         width: 100%;
     }
-    
     .nav_links {
         display: flex; 
         flex-direction: row;
@@ -138,7 +140,7 @@ header {
     }
 
     /* Adding a thumbs up emoji to specific list items in cards for a touch of flair */
-    .card :nth-of-type(2)::after {
+    .card li:nth-of-type(2)::after {
         content: "\1F44D"; /* thumbs up emoji */
     }
 }
