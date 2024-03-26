@@ -2,8 +2,6 @@
 /* Imports the Poppins font family from Google Fonts, including all the available weights from 100 to 900. This allows the website to use various font weights for typography design. */
 
 body {
-    margin: 0; /* Removes the default margin from the body element to ensure the layout stretches fully across the viewport. */
-    padding: 0; /* Removes the default padding from the body element for a full-width layout. */
     font-family: 'Poppins', serif; /* Sets the default font to Poppins, with a generic serif font as a fallback. */
     font-size: 1.3rem; /* Sets the default font size to 1.3rem, scaling the text size based on the user's browser settings for readability. */
     background-color: #f1f1f1; /* Sets a light gray color as the background of the webpage for a subtle, neutral look. */
@@ -26,11 +24,10 @@ header {
       width: 475px; /* Ends the animation with the logo width at 475px. */
       opacity: 1; /* Ends the animation with the logo fully opaque. */
     }
-}
-
-#logo {
+    #logo {
     animation: logochange 5s linear 0s 1; /* Applies the "logochange" animation over 5 seconds, once, without delay, and with a constant animation speed. */
 }
+
 
 .nav_links {
     display: flex; /* Enables flexbox layout for navigation links, allowing responsive alignment and spacing. */
