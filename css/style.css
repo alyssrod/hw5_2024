@@ -35,17 +35,8 @@ header {
 }
 
 /* The navigation links are laid out horizontally, spaced evenly. Link colors are standardized to ensure consistency, with underline styles for hover and focus states for accessibility. */
-.nav_links {
-    display: flex;
-    flex-wrap: nowrap; 
-    flex-direction: column;
-}
-.nav_item a:link, .nav_item a:visited, .nav_item a:focus, .nav_item a:hover {
-    color: rgb(0, 0, 238);
-
-}
-.nav_item a:hover, .nav_item a:focus {
-    text-decoration: underline;
+.nav_item a:visited {
+    color: blue;
 }
 
 .card > header {
