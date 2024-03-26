@@ -94,7 +94,7 @@ header {
 }
 
 /* For users who prefer reduced motion, the logo's animation is disabled to avoid unnecessary motion. */
-@media (prefers-reduced-motion: reduced) {
+@media (prefers-reduced-motion: reduce) {
     #logo {
         width: 475px;
         animation: none;
