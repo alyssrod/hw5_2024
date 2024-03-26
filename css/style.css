@@ -24,7 +24,7 @@ header {
       width: 475px; /* Ends the animation with the logo width at 475px. */
       opacity: 1; /* Ends the animation with the logo fully opaque. */
     }
-    #logo {
+#logo {
     animation: logochange 5s linear 0s 1; /* Applies the "logochange" animation over 5 seconds, once, without delay, and with a constant animation speed. */
 }
 
@@ -112,7 +112,6 @@ header {
     }
     .nav_links {
         flex-direction: row;
-        width: 100%;
         align-items: center;
         justify-content: space-around;
     }
