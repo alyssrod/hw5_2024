@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+@keyframes logochange{
+    0% { 
+      width: 25px;
+      opacity: 0;
+    }
+    100% {
+      width: 475px;
+      opacity: 1;
+    }
+}
+
+#logo {
+    animation: logochange 5s linear 0s 1;
+}
 /* Sets the Poppins font from Google Fonts as the default font for the body. The backup font is serif. The body also has a light gray background color and a background image for texture. */
 body {
     margin: 0;
@@ -18,21 +32,6 @@ header {
     flex-direction: column;
     align-items: center;
 
-/* Defines the animation for the logo, which grows in size and fades in from transparent to opaque over 5 seconds. */
-@keyframes logochange{
-    0% { 
-      width: 25px;
-      opacity: 0;
-    }
-    100% {
-      width: 475px;
-      opacity: 1;
-    }
-}
-
-#logo {
-    animation: logochange 5s linear 0s 1;
-}
 
 /* The navigation links are laid out horizontally, spaced evenly. Link colors are standardized to ensure consistency, with underline styles for hover and focus states for accessibility. */
 .nav_links {
