@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /* Imports the Poppins font family from Google Fonts, including all the available weights from 100 to 900. This allows the website to use various font weights for typography design. */
+@keyframes logochange {
+    0% { 
+      width: 25px; /* Starts the animation with the logo width at 25px. */
+      opacity: 0; /* Starts the animation with the logo fully transparent. */
+    }
+    100% {
+      width: 475px; /* Ends the animation with the logo width at 475px. */
+      opacity: 1; /* Ends the animation with the logo fully opaque. */
+    }
+#logo {
+    animation: logochange 5s linear 0s 1; /* Applies the "logochange" animation over 5 seconds, once, without delay, and with a constant animation speed. */
+}
 
 body {
     font-family: 'Poppins', serif; /* Sets the default font to Poppins, with a generic serif font as a fallback. */
@@ -13,19 +25,6 @@ header {
     flex-wrap: nowrap; /* Ensures the header content doesn't wrap and stays in a single row. */
     flex-direction: column; /* Aligns header content vertically for a structured look. */
     align-items: center; /* Centers the header content horizontally within the header element. */
-}
-
-@keyframes logochange {
-    0% { 
-      width: 25px; /* Starts the animation with the logo width at 25px. */
-      opacity: 0; /* Starts the animation with the logo fully transparent. */
-    }
-    100% {
-      width: 475px; /* Ends the animation with the logo width at 475px. */
-      opacity: 1; /* Ends the animation with the logo fully opaque. */
-    }
-#logo {
-    animation: logochange 5s linear 0s 1; /* Applies the "logochange" animation over 5 seconds, once, without delay, and with a constant animation speed. */
 }
 
 
